@@ -91,6 +91,14 @@ class Robot
   end
 
   def attack(unit)
+    if (unit.position[0] - @position[0]).between?(-2,2) &&
+    (unit.position[1] - @position[1]).between?(-2,2)
+      if @equipped_weapon.class == Grenade
+        @equipped_weapon.hit(unit)
+        @equipped_weapon = nil
+      end
+    end
+
     if (unit.position[0] - @position[0]).between?(-1,1) &&
     (unit.position[1] - @position[1]).between?(-1,1)
       if @equipped_weapon != nil
