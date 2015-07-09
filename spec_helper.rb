@@ -8,6 +8,7 @@ safe_require 'weapons'
 safe_require 'box_of_bolts'
 safe_require 'laser'
 safe_require 'plasma_cannon'
+safe_require 'grenade'
 
 
 RSpec.configure do |config|
