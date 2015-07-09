@@ -111,6 +111,9 @@ class Robot
     if item.is_a? (Weapon)
       @equipped_weapon = item
     end
+    if item.class == BoxOfBolts && self.health <= 80
+      item.feed(self)
+    end
   end
 
 end
